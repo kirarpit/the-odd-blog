@@ -1,0 +1,77 @@
+title:           The Odd Blog
+description:     As the name suggests, there seems to be something odd about this blog! Let's find it out. :D
+disqus_shortname: ThePeculiarBlog
+reading_time:     true
+words_per_minute: 150
+# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
+# When testing locally leave blank or use http://localhost:4000
+url: https://theoddblog.in
+
+# Owner/author information
+owner:
+  name:           Arpit Garg
+  avatar:         avatar.jpg
+  bio:            "I am a coder, gamer, logician, wannabe-feminist though notorious-misogynist and ironically skinny couch potato! :P"
+  email:          iarpitgarg@mail.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        
+  facebook:       iarpitgarg
+  github:         kirarpit
+  stackexchange:  
+  linkedin:       iarpitgarg
+  instagram:      
+  flickr:         
+  tumblr:         
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:    
+
+# Background image to be tiled on all pages
+background: witewall_3.png
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:   UA-61652282-1
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:         
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Calcutta
+future:      true
+highlighter: pygments
+markdown:    kramdown
+gems:
+  - jekyll-sitemap
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+# Amount of post to show on home page
+paginate: 3
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: true
+
+  coderay:
+    coderay_line_numbers: nil
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 8
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "_posts/default_posts", "theme-setup", "public"]
+
+# Emoticons
+emoji_dir: /images/emoji
+
+# Build settings
+markdown: kramdown
+source: /home/ubuntu/the-peculiar-blog/HPSTR
+destination: /srv/www/thepeculiarblog/jekyll
