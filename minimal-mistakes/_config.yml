@@ -239,8 +239,8 @@ compress_html:
     envs: development
 
 # Build settings
-source: /home/ubuntu/the-peculiar-blog/minimal-mistakes
-destination: /srv/www/thepeculiarblog/minimal-mistakes
+source: /root/the-odd-blog/minimal-mistakes
+destination: /srv/www/theoddblog/minimal-mistakes
 
 defaults:
   # _posts

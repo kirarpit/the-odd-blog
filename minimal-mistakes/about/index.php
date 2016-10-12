@@ -81,7 +81,7 @@
 				</li>
 				
 				<li>
-					<a href="http://facebook.com/iarpitgarg"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
+					<a href="http://facebook.com/kirarpit"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
 				</li>
 				
 				<li>
@@ -139,7 +139,7 @@
         <div
              data-inline-placeholder="Add Websites">
 	     <p><a href="https://www.linkedin.com/in/iarpitgarg" rel="nofollow" target="_blank"><i class="icon-linkedin"></i> linkedin.com/in/iarpitgarg</a></p>
-	     <p><a href="https://www.facebook.com/iarpitgarg" rel="nofollow" target="_blank"><i class="icon-facebook"></i> facebook.com/iarpitgarg</a></p>
+	     <p><a href="https://www.facebook.com/kirarpit" rel="nofollow" target="_blank"><i class="icon-facebook"></i> facebook.com/kirarpit</a></p>
 	     <p><a href="https://github.com/kirarpit" rel="nofollow" target="_blank"><i class="icon-github"></i> github.com/kirarpit</a></p>
         </div>
 
@@ -406,7 +406,7 @@
          data-field="content"
          data-placeholder="Article Content">
       <ul>
-<li><a href="http://engineering.mysmartprice.com/How-we-integrated-Whatsapp-Messenger/" rel="nofollow" target="_blank">Created an automated simulation of WhatsApp client using the unofficial API through PHP code.</a></li>
+<li><a href="http://tech.mysmartprice.com/How-we-integrated-Whatsapp-Messenger/" rel="nofollow" target="_blank">Created an automated simulation of WhatsApp client using the unofficial API through PHP code.</a></li>
 </ul>
     </div>
 <!-- </article> -->
