@@ -406,7 +406,7 @@
          data-field="content"
          data-placeholder="Article Content">
       <ul>
-<li><a href="http://tech.mysmartprice.com/How-we-integrated-Whatsapp-Messenger/" rel="nofollow" target="_blank">Created an automated simulation of WhatsApp client using the unofficial API through PHP code.</a></li>
+<li><a href="http://engineering.mysmartprice.com/How-we-integrated-Whatsapp-Messenger/" target="_blank">Created an automated simulation of WhatsApp client using the unofficial API through PHP code.</a></li>
 </ul>
     </div>
 <!-- </article> -->

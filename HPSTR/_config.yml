@@ -5,7 +5,7 @@ reading_time:     true
 words_per_minute: 150
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url: https://theoddblog.in
+url: http://theoddblog.in
 
 # Owner/author information
 owner:
@@ -73,5 +73,5 @@ emoji_dir: /images/emoji
 
 # Build settings
 markdown: kramdown
-source: /home/ubuntu/the-peculiar-blog/HPSTR
+source: /root/the-odd-blog/HPSTR
 destination: /srv/www/thepeculiarblog/jekyll
