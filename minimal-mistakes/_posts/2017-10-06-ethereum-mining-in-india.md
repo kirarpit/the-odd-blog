@@ -1,11 +1,11 @@
 ---
 title: "Ethereum Mining in India"
-description: "A guide to mine Ethereum in India"
+description: "A guide to mine Ethereum in India 2017"
 tags: [crypto, ethereum, mining, crypto-mining]
 ---
 
 TL;DR: 
-If you are only interested in checking out the mining rig’s configuration then refer the table below. It contains elaborated details about each and every component required to make the system and the prices at which I bought them in India. Or, if you're just interested in knowing whether it's profitable to mine Ethereum in India then click [here](#nope).
+If you're only interested in checking out the mining rig’s configuration then refer the table below. It contains elaborated details about each and every component required to make the system and the prices at which I bought them in India. Or, if you're just interested in knowing whether it's profitable to mine Ethereum in India then click [here](#nope).
 
 [PCPartPicker Part List](https://in.pcpartpicker.com/list/hdH2vV){:target="_blank"} 
 
@@ -27,7 +27,7 @@ Type|Item|Price
 </figure>
 
 ## Whom is this guide for?
-- If you are a crypto enthusiast and have been wondering about setting up your own mining rig but are uncertain of the logistics.
+- If you're a crypto enthusiast and have been wondering about setting up your own mining rig but are uncertain of the logistics.
 - If you wish, you knew a cool friend who’s already been mining so that you could gain some valuable insights before investing in it yourself.
 - If you’ve already set up a mining rig but are facing difficulty in figuring out the optimum configuration of the system.
 
@@ -88,7 +88,7 @@ And finally these are the minimum payouts of 0.05 Ethers:
 	<img src="/images/mining_rewards.png" alt="Claymore Report">
 </figure>
 
-## <a name="nope"></a>Is it still worth mining Ethereum?
+## <a name="nope"></a>Is it still worth mining Ethereum in India?
 Short answer is nope. Long answer is that it depends on a lot of variables we discussed above and for most of the people who are yet to buy the hardware, the answer is still nope. The major reason behind it is not the expensive hardware but increase in mining difficulty over the period of time.
 
 If you take a closer look at the [payout screenshot](#payout_screenshot), you'll notice how it always took more time to get next payout than the time it took to get the previous one. It means that eventually with my current fixed hashrate, it will take me forever to get 0.05 Ether payout. According to [Ethereum difficulty chart by Etherscan](https://etherscan.io/chart/difficulty){:target="_blank"}, there was a 37% increase in difficutly from the months August to September and 43% from July to August. Although, it's an exponential curve but let's assume a constant increase of 25%(much lower than actual) in difficulty every month. According to my current payout, the sum of my total future earnings could be defined by this geometric progression.
@@ -105,6 +105,6 @@ To make things even worse, Ethereum community has long back decided to switch to
 ## Conclusion
 If you're a true believer of crypto currencies and want to hold them for a long time then investing directly and buying coins would definitely be much more profitable than mining of any sort. However, if mining as a concept fascinates you then it could very well be pursued as a hobby. You could closely follow and learn a lot about new upcoming blockchains, mine them and have a say in developing their future with your voting power. Not to mention, the immense amount of learning during the process of setting up a complete mining rig, which only depends on how much in depth you're willing to venture, is priceless.
 
-> The capacity to learn is a gift; the ability of learn is a skill; the willingness to learn is a choice
+> The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice
 >
 ~ Brian Herbert

@@ -56,7 +56,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : "kirarpit"
 facebook:
   username               : "kirarpit"
   app_id                 :
@@ -94,7 +94,7 @@ author:
   github           : "kirarpit"
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : "kirarpit"
   lastfm           :
   linkedin         : "iarpitgarg"
   pinterest        :
@@ -102,7 +102,7 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
   tumblr           :
-  twitter          :
+  twitter          : "kirarpit"
   vine             :
   weibo            :
   xing             :
