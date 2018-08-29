@@ -81,8 +81,8 @@ analytics:
 author:
   name             : "Arpit Garg"
   avatar           : "avatar.jpg"
-  bio              : "I am a coder, gamer, logician, wannabe-feminist though notorious-misogynist and ironically skinny couch potato! :P"
-  location         : "Hyderabad, India"
+  bio              : "I am a coder, gamer, logician and ironically skinny couch potato! Searching for a leverage in the world so that I could be truly lazy. :D"
+  location         : "New Mexico, US"
   email            : "iarpitgarg@gmail.com"
   uri              :
   bitbucket        :
@@ -239,7 +239,7 @@ compress_html:
     envs: development
 
 # Build settings
-source: /root/the-odd-blog/minimal-mistakes
+source: /home/ubuntu/the-odd-blog/minimal-mistakes
 destination: /srv/www/theoddblog/minimal-mistakes
 
 defaults:

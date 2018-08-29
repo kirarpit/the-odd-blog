@@ -73,7 +73,7 @@
 				<li>
 					<img src="/images/avatar.jpg" alt="Arpit Garg photo" class="author-photo">
 					<h4>Arpit Garg</h4>
-					<p>I am a coder, gamer, logician, wannabe-feminist though notorious-misogynist and ironically skinny couch potato! :P</p>
+					<p>I am a coder, gamer, logician and ironically skinny couch potato! Searching for a leverage in the world so that I could be truly lazy. :D</p>
 				</li>
 				<li><a href="/about/"><span class="btn btn-inverse">Learn More</span></a></li>
 				<li>
