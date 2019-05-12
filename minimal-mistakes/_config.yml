@@ -56,7 +56,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : "kirarpit"
+  username               :
 facebook:
   username               : "kirarpit"
   app_id                 :
@@ -82,7 +82,7 @@ author:
   name             : "Arpit Garg"
   avatar           : "avatar.jpg"
   bio              : "I am a coder, gamer, logician and ironically skinny couch potato! Searching for a leverage in the world so that I could be truly lazy. :D"
-  location         : "Albuquerque, New Mexico, US"
+  location         : "ABQ, NM, US"
   email            : "iarpitgarg@gmail.com"
   uri              :
   bitbucket        :
@@ -102,7 +102,7 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
   tumblr           :
-  twitter          : "kirarpit"
+  twitter          :
   vine             :
   weibo            :
   xing             :
@@ -125,6 +125,7 @@ exclude:
   - assets/js/_main.js
   - assets/js/vendor
   - _posts/default_posts
+  - _posts/archive
   - Capfile
   - CHANGELOG
   - config

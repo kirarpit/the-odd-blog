@@ -48,8 +48,8 @@ On the contrary, I certainly didn't do much research in getting the right graphi
 Key things to keep in mind when overclocking are Fan Speed, Memory Cycles and Power Usage.
 
 - Fan speed plays a crucial role in maintaining the Card's temperature. In fact, even in summers, air conditioning is not required if the fan speed is set properly and good ventilation is maintained to avoid heat accumulation. Generally, fans work efficiently when set at 70-80% fan speed.
-- Memory Cycles is the one which decides the hashrate output. More memory means better hashrate. But there is a limit upto which you could adjust it without crashing your system. The cards are gonna be fine though as it's really difficult to brick a card, so feel free to try absurd settings.
-- Power usage after a limit wouldn't provide much improvements in hashrate and hence, wouldn't be worth increasing the electricity cost.
+- Memory Cycles is the one which decides the hashrate output. More memory means better hashrate. But there is a limit upto which you could increase it without crashing your system. The cards are gonna be fine though as it's really difficult to brick a card, so feel free to try absurd settings.
+- Increase in power usage after a limit wouldn't provide much improvements in hashrate and hence, wouldn't be worth increasing the electricity cost.
 - Here's what my configuration looks like. I'm using [CycleNerd's Code](https://github.com/Cyclenerd/ethereum_nvidia_miner){:target="_blank"} for settings and setup files.
   
 {% highlight ruby %}
