@@ -21,7 +21,7 @@ comments:
   provider               : "disqus"
   #provider               : "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
-    shortname            : "ThePeculiarBlog"
+    shortname            : "TheOddBlog"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -80,8 +80,8 @@ analytics:
 # Site Author
 author:
   name             : "Arpit Garg"
-  avatar           : "avatar.jpg"
-  bio              : "I am a coder, gamer, logician and ironically skinny couch potato! Searching for a leverage in the world so that I could be truly lazy. :D"
+  avatar           : "avatar.png"
+  bio              : "I am a Reinforcement Learning researcher, a puzzle lover, a poker enthusiast, a veteran gamer and a novice rock climber. Not convinced? Get in touch!"
   location         : "ABQ, NM, US"
   email            : "iarpitgarg@gmail.com"
   uri              :
