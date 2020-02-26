@@ -17,7 +17,7 @@ Arguably, one could simply use a dropbox folder but that's not an elegant soluti
 ## Installing Unison
 To install the program simply run `sudo apt-get -y install unison` on linux or `brew install unison` on Mac OS.
 
-> Note, Unison version on both the systems - among which files are synchronised - need to be the same. To downgrade Unison to 2.48.4 on Mac OS follow [this](https://eric.blog/2019/01/12/install-unison-2-48-4-on-mac-os-x-with-homebrew/){:target="_blank"} guide.
+> Note: Unison version on both the systems - among which files are synchronised - need to be the same. To downgrade Unison to 2.48.4 on Mac OS follow [this](https://eric.blog/2019/01/12/install-unison-2-48-4-on-mac-os-x-with-homebrew/){:target="_blank"} guide.
 
 ## Running Unison
 First, let's create two directories, "test1" and "test2" by running `mkdir test1 test2`. Next, we can synchronise these two directories simply by running `unison test1 test2`. Now, the next time we run the above command again, the changes made in either of the directories will be propagated to the other directory.
@@ -27,7 +27,7 @@ Similarly, files could be synchronised between a local machine and a remote serv
 
 We can also set a lot of options to configure synchronisation according to our needs, for example `-auto true` option automatically accepts default actions. A configuration file with `.prf` extension under `~/.unison/` directory will allow you to specify all these options in a file instead.
 
->Note, you might have to create the directory `~/.unison` in Mac OS if it doesn't get created automatically.
+>Note: you might have to create the directory `~/.unison` in Mac OS if it doesn't get created automatically.
 
 This is what my configuration file `~/.unison/my_conf.prf` looks like.
 
@@ -119,6 +119,11 @@ times=true
 ~~~~
 
 To use the above config file, simply run `unison my_conf`. Finally, a cron job could be set which runs the above command every 5 minutes or so.
+
+## Limitations
+So far the only limitation of Unison that I have come across is that it does not handle hard links as mentioned in the [documentation](https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html). Meaning if Unison were to copy folders that contain files with hard links, they will be treated as different files. This would create duplicates and take more space on your hard drive. More information [here](https://superuser.com/questions/1362594/can-unison-be-made-to-ignore-bind-mounts-or-hard-links).
+
+A work around of this problem is using [rdfind](https://rdfind.pauldreik.se/) to find duplicates and replace them with either soft or hard links. For example if you want to remove duplicates and replace them with hard links in two directories A and B, the following command would achieve that, `rdfind -makehardlinks A B`. Checkout the documentation for more options [here](https://rdfind.pauldreik.se/rdfind.1.html).
 
 ## Discussion
 With Unison the possibilities are endless. You could even synchronise arbitrary number of systems by making one system act as a central hub that sequentially runs multiple configuration files. Also, a lot of times, I run computationally expensive jobs on an HPC server which spit out a lot of data that I need to monitor on my local system at times. Unison makes it a lot easier than manually running scripts to transfer data. In short, Unison is a game changer!

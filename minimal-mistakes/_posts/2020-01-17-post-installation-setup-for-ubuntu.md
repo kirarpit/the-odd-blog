@@ -1,21 +1,23 @@
 ---
-title: "Post-Installation Setup for Ubuntu 19.10 on Dell XPS 13"
+title: "Post-Installation Setup for Ubuntu 19.10 on Dell XPS 13 7390"
 description: "Good-to-make improvements and enhancements for your freshly installed Ubuntu 19.10"
-tags: [Ubuntu, Touchpad Gestures]
+tags: [Ubuntu, Mac-to-Linux]
 ---
+After being a macOS user since 2014, I recently switched to Ubuntu on my new Dell XPS. Here are some of the changes I had to make to ensure a smoother transition.
+
 ## Display Scale Settings
 
 ### a) Using experimental fractional scaling
 - Enable fractional scaling in display settings:
 `gsettings set org.gnome.mutter experimental-features "['x11-randr-fractional-scaling']"`  
-- Set fractional scaling to 125%  
+- Set fractional scaling to 125% by navigating to settings -> devices -> displays on your Ubuntu
 - Scale the text alone by 110% since 125% fractional scaling is still a little too small: `gsettings set org.gnome.desktop.interface text-scaling-factor 1.1`  
 - In case you need to reset the settings, run this: `gsettings reset org.gnome.mutter experimental-features`  
 
 ### b) Without using experimental fractional scaling
 - Since fractional scaling is still an experimental feature and makes my screen flick, I like scaling just the text: `gsettings set org.gnome.desktop.interface text-scaling-factor 1.375`
 
-To autostart gsettings on login, make a .desktop application in ~/.config/autostart/ and add the following
+To autostart gsettings on login, make a .desktop application in ~/.config/autostart/ and add the code shown below. Make sure the Exec field contains the command you ran to fix your display.
 
 ```shell
 [Desktop Entry]
@@ -28,8 +30,10 @@ Categories=GNOME;GTK;System;
 X-GNOME-Autostart-enabled=true
 ```
 
+Also, after scaling the text, Universal Access menu icon on the top task bar would appear. In case you wanna get rid of it, install "Remove Accessibility" extension from Ubuntu Software Center.
+
 ## Turning Off Adaptive Brightness
-- Restart and hold down F2 or F12 to enter BIOS settings. Go to Video and turn off EcoPower.
+- Restart and hold down F2 or F12 to enter BIOS settings. Go to Video and turn off EcoPower
 
 ## Touchpad Enhancements
 
@@ -40,6 +44,10 @@ X-GNOME-Autostart-enabled=true
 - Another quite annoying thing is cursor jumping around when you are typing something. Thank me later and disable the touchpad while typing by doing the following:
 	- Install dconf-editor: `sudo apt install dconf-editor`
 	- Create a disable-while-typing key and set it to True: `dconf write org/gnome/desktop/peripherals/touchpad/disable-while-typing true`
+
+### Enable Palm Detection
+- Apparently, disabling touchpad while typing is not enough to prevent you from infuriating cursor jumps while typing. So, we need to enable palm detection that would disable palm touch.
+- Add the line `Option "PalmDetection" "True"` in touchpad Section in the file `/usr/share/X11/xorg.conf.d/40-libinput.conf` after driver line.
 
 ### Enable touchpad gestures using libinput-gestures
 - Add current user to the 'input' group: `sudo gpasswd -a $USER input`. This change takes affect only on the next log in.
@@ -102,7 +110,7 @@ X-GNOME-Autostart-enabled=true
   ```
 - In case you want to reset the macros mapping: `setxkbmap -option`
 
-## Enable Quick-Preview
+## Enable Quick-Preview macOS Style
 - Insatll gnome-sushi: `sudo apt install gnome-sushi`
 - Restart gnome: `nautilus -q`
 
@@ -123,7 +131,8 @@ X-GNOME-Autostart-enabled=true
 - Insert this in the Exec command: `--force-device-scale-factor=1.375`
 
 ## Low Resolution Icon Fix in Application Switcher
-- Append `--class=<application>` to the Exec command in ".desktop" file.
+- Insert this in the Exec commands of the applications that have low resolution icons during tab switch: `--class="<application>"`
+- Applications installed via Snap Store would be in `/var/lib/snapd/desktop/applications/` otherwise they will be in `/usr/share/applications/`.
 
 ## Keyboard Shortcuts
 A couple of pseudo-Mac handy shortcuts that can be easily set in the keyboard settings
@@ -138,11 +147,9 @@ A couple of pseudo-Mac handy shortcuts that can be easily set in the keyboard se
 - Close window: Ctrl+Q
 - Maximize window: Ctrl+M
 - Restore window: Ctrl+N
-- View split on left: Ctrl+Left
-- View split on right: Ctrl+Right
 
 ## Other Missing Enhancements
-Following are some of the features that I like in Mac OS but don't have a way to get in Ubuntu. Please let me know in the comments below if you do.
+Following are some of the features that I like in macOS but don't have a way to get in Ubuntu. Please let me know in the comments below if you do.
 
 - Kinetic Scrolling
 - Cursor Acceleration
