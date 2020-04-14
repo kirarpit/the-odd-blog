@@ -1,7 +1,7 @@
 ---
 title: "Post-Installation Setup for Ubuntu 19.10 on Dell XPS 13 7390"
 description: "Good-to-make improvements and enhancements for your freshly installed Ubuntu 19.10"
-tags: [Ubuntu, Mac-to-Linux]
+tags: [Ubuntu, Mac, Linux, Keyboard, Hotkeys]
 ---
 After being a macOS user since 2014, I recently switched to Ubuntu on my new Dell XPS. This post talks about the changes I had to make to ensure a smoother transition. It also serves as a guide for setting up a new Ubuntu machine ready for development!
 
@@ -40,10 +40,12 @@ Following are the steps to do so,
   - `Hotkey: <alt>+d --> <ctrl>+d`
   - `Hotkey: <alt>+r --> <ctrl>+r`
   - `Hotkey: <alt>+w --> <ctrl>+w` & `Hotkey: <ctrl>+w --> <ctrl>+<shift>+w`. In this example, since I don't want to remap "Ctrl+W" function in Vim, I have to set the close-terminal hotkey in my terminal back to "Ctrl+Shift+W" and use AutoKey to send "Ctrl+Shift+W" when I press "Ctrl+W". This way I freed-up "Ctrl+W" for "Alt+W"
+  - `Hotkey: <alt>+<tab> --> <ctrl>+<page_down>` (for chrome)
+  - `Hotkey: <alt>+<shift>+<tab> --> <ctrl>+<page_up>` (for chrome)
 - And that's it! This strategy could be used to get Mac keyboard layout for any application on Ubuntu
 
 ### Map hjkl keys to arrow keys
-- Give up the right Alt key to map "hjkl" to arrow keys as it is in Vim,
+Once you go hjkl you can never go back. Vim users understand. Also given how everyone has clearly put their best people to make these arrow keys smaller and smaller, I am convinced they will eventually vanish. Plus, anything less than full-sized keyboard such as 60% keyboard would not have these arrow keys anyway. Give up the right Alt key to map "hjkl" to arrow keys,
   - Find the key encodings of the keys using `xmodmap -pke`. You can also use `xve` to find keycodes and keysymbols
   - Add the following to ~/.Xmodmap
 
@@ -58,8 +60,8 @@ Following are the steps to do so,
   - This maps "Alt+j" to Down, "Alt+k" to Up and so on
 
 ### Use capslock as escape
-- Map the capslock key to the escape key
-  - Append the following to ~/.Xmodmap
+Vim users are in for a treat with this one! Have you ever used the Capslock key since your inception into the world of capslocks? The only times it makes its presence in my life is when I am annoyed and about to type a password for the third time. Put it to work and enjoy another Esc key, much closer to your hand and heart.
+- Append the following to ~/.Xmodmap
 
     ```shell
     ! set capslock to escape key
@@ -67,8 +69,9 @@ Following are the steps to do so,
     keycode 66 = Escape NoSymbol Escape
     ```
 
+### Touch-ups
 - In case you want to reset xmodmap mapping, run `setxkbmap -option`
-- Finally, to autostart mapping on login, make a .desktop application in ~/.config/autostart/ and add the following
+- Finally, to autostart Xmodmap and AutoKey on login, make two `.desktop` applications in `~/.config/autostart/` that look like the following
 
   ```shell
   [Desktop Entry]
@@ -78,6 +81,17 @@ Following are the steps to do so,
   Exec=/usr/bin/xmodmap /home/arpit/.Xmodmap
   Comment=
   Categories=GNOME;GTK;System;
+  X-GNOME-Autostart-enabled=true
+  ```
+
+  ```shell
+  [Desktop Entry]
+  Type=Application
+  Hidden=false
+  NoDisplay=false
+  Name=Autokey
+  Exec=autokey-gtk &
+  Comment=
   X-GNOME-Autostart-enabled=true
   ```
 
@@ -99,7 +113,7 @@ A couple of pseudo-Mac handy shortcuts that can be easily set in the keyboard se
 - Restart gnome: `nautilus -q`
 
 ## Touchpad Enhancements
-If there is a reason why my next laptop could be a Macbook, it would be because of the touchpad. The touchpad experience on a Mac is lightyears ahead! No wonder the entire base is a touchpad on 16" Macbooks. Below are some changes to make Dell's touchpad suck less on Ubuntu.
+If there is a reason why my next laptop could be a Macbook, it would be because of the touchpad. The touchpad experience on a Mac is lightyears ahead! No wonder the entire base is a giant touchpad on 16" Macbooks. Below are some changes to make Dell's touchpad suck less on Ubuntu.
 
 ### Disable single finger tap-and-drag
 Every once in a while, single tap would be registered as double tap which will make the objects drag, making it very annoying. Disable it: `gsettings set org.gnome.desktop.peripherals.touchpad tap-and-drag false`
@@ -178,7 +192,7 @@ X-GNOME-Autostart-enabled=true
 Also, after scaling the text, Universal Access menu icon on the top task bar would appear. In case you wanna get rid of it, install "Remove Accessibility" extension from Ubuntu Software Center.
 
 ## Turning Off Adaptive Brightness
-Why? Why is that even a feature? Goodness gracious you could turn this off otherwise this laptop was going back. Restart and hold down F2 or F12 to enter BIOS settings. Go to Video and turn off EcoPower.
+Why? Why is that even a feature? Goodness gracious you could turn this pesky feature off otherwise this laptop was gonna fly back to where it came from. Restart and hold down F2 or F12 to enter BIOS settings. Go to Video and turn off EcoPower.
 
 ## Enable Web Whatsapp in Chromium
   - Copy the ".desktop" file to your local applications folder: `cp /var/lib/snapd/desktop/applications/chromium_chromium.desktop ~/.local/share/applications`
@@ -195,6 +209,7 @@ Why? Why is that even a feature? Goodness gracious you could turn this off other
 ## Other Missing Enhancements
 Following are some of the features that I like in macOS but don't have a way to get in Ubuntu. Please let me know in the comments below if you do.
 
-- Kinetic Scrolling
-- Cursor Acceleration
+- Better hibernation that doesn't drain as much battery
+- Kinetic scrolling
+- Cursor acceleration
 - A system-wide two fingers pinch to zoom in and out

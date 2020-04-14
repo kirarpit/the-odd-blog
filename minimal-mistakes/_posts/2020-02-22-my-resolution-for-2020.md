@@ -16,6 +16,6 @@ Recently, I came up with what I believe is a good idea for a new year's resoluti
 - What's their history?
 - Their geographical location and how does it affect the people there?
 
-Did you know there are only about 190 countries in the world? Even if you take some time out to study 1 country every two days, you would be done in about a year. And imagine how much more knowledgable your future self in a year would be. You would be able to understand the world news and relate to people so much better. Your entire perspective of how you view the world could entirely change. You might start enjoying participating in discussions that otherwise seem annoying and boring.
+Did you know there are only about 190 countries in the world? Even if you study a country every two days, you would be done in about a year. Imagine how much more knowledgable your future self in a year would be. You would be able to understand the world news and relate to people so much better. Your entire perspective of how you view the world could change. You might start enjoying participating in discussions that otherwise seem annoying and boring.
 
 And then finally you would be in a perfect place to fantasize about your ideal country. Given you have the power, what sort of country would you like to set up?
