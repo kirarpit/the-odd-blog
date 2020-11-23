@@ -212,16 +212,17 @@ Apparently, disabling touchpad while typing is not enough to save you from infur
   - Solarized theme: Profiles -> Colors -> Built-in-schemes -> Solarized dark
   - Set keybindings for closing and going to next or previous windows in the same way as Chrome
 
-## Display Scale Settings
+## Display Settings
 
-### a) Using experimental fractional scaling
+### Built-in Display Only
+a) Using experimental fractional scaling
 - Enable fractional scaling in display settings:
 `gsettings set org.gnome.mutter experimental-features "['x11-randr-fractional-scaling']"`  
 - Set fractional scaling to 125% by navigating to settings -> devices -> displays on your Ubuntu
 - Scale the text alone by 110% since 125% fractional scaling is still a little too small: `gsettings set org.gnome.desktop.interface text-scaling-factor 1.1`  
 - In case you need to reset the settings, run this: `gsettings reset org.gnome.mutter experimental-features`  
 
-### b) Without using experimental fractional scaling
+b) Without using experimental fractional scaling
 - Since fractional scaling is still an experimental feature and makes my screen flick, I like scaling just the text: `gsettings set org.gnome.desktop.interface text-scaling-factor 1.375`
 
 To autostart gsettings on login, make a .desktop application in ~/.config/autostart/ and add the code shown below. Make sure the Exec field contains the command you ran to fix your display.
@@ -238,6 +239,15 @@ X-GNOME-Autostart-enabled=true
 ```
 
 Also, after scaling the text, Universal Access menu icon on the top task bar would appear. In case you wanna get rid of it, install "Remove Accessibility" extension from Ubuntu Software Center.
+
+### With an External Monitor
+Add the following in `~/.xprofile`
+```shell
+xrandr --output eDP-1 --scale 1x1	
+xrandr --output DP-2 --primary
+xrandr --output DP-2 --left-of eDP-1
+xrandr --output eDP-1 --scale 0.65x0.65
+```
 
 ## Turning Off Adaptive Brightness
 Why? Why is that even a feature? Goodness gracious you could turn this pesky feature off otherwise this laptop was gonna fly back to where it came from. Restart and hold down F2 or F12 to enter BIOS settings. Go to Video and turn off EcoPower.
