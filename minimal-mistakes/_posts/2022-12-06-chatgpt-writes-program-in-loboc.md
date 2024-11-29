@@ -1,0 +1,100 @@
+---
+title: "ChatGPT Writes Program in loboc"
+description: ""
+tags: []
+---
+
+Back in my master's program at the University of New Mexico (UNM), I had the privilege of taking a course on compiler construction taught by an exceptional teacher, Professor [David H. Ackley](https://www.cs.unm.edu/~ackley/). This was the very last course he taught before he retired as a professor. I feel quite lucky to attend his course before he retired as he is an excellent teacher and had a very unique and engaging style of teaching. I will never forget his [uan-aan's](https://www.youtube.com/watch?v=oXiqMGhn9rk&t=43s). 
+
+In this course, we built a compiler from scratch! We defined a set of rules, known as a grammar, for a new custom programming language we dubbed "loboc," which was quite fitting considering UNM is colloquially referred to as the lobos and the university's mascot is a wolf, which translates to "lobos" in Spanish. Additionally, the fact that "loboc" spelled backwards is "cobol," a well-known programming language, is pretty cool.
+
+Anyway, so we wrote a C-based compiler that parses loboc code according to the specified grammar rules and converts it to MIPS assembly code, which can be executed using spim, a MIPS architecture simulator. In essence, we wrote a program that converts loboc code written by humans into assembly code that can by understood by machines.
+
+In the end, you could actually write programs in loboc, the language we created, and perform useful tasks with it. For example, you can write a loboc code that takes in an array and an element from the user and then performs a binary search for the element in the array. Indeed a quite useful task but isn't that really cool though!? To my delight, the code still works to this very day! You can check out the [Github link](https://github.com/kirarpit/compiler-construction) if you're interested in trying it out yourself.
+
+So, given the title of this post you probably know what's coming next. I wondered if, given the loboc grammar and a code example in it, whether [ChatGPT](https://openai.com/blog/chatgpt/) could write more programs for me. This way I could finally have my very first user of loboc.
+
+So I copied and pasted [the grammar rules](https://github.com/kirarpit/compiler-construction/blob/master/spikes/spike5/grammar.txt) as shown below for ChatGPT's perusal.
+
+{% include figure image_path="/images/chatgpt_loboc_grammar_posted.webp" alt="" caption="" %}
+
+ChatGPT, as magical as it is, obviously understood everything and responded with the following:
+
+{% include figure image_path="/images/chatgpt_loboc_understood_grammar.webp" alt="" caption="" %}
+
+I then proceeded by giving it a code example displayed in the [README](https://github.com/kirarpit/compiler-construction/blob/master/README.md):
+
+{% include figure image_path="/images/chatgpt_loboc_example_code.webp" alt="" caption="" %}
+
+And at a lightning-fast speed, ChatGPT did its thing again:
+
+{% include figure image_path="/images/chatgpt_loboc_understood_program.webp" alt="" caption="" %}
+
+Next, I gave it the following prompt:
+
+> Now write a program that takes an integer from the user and returns the next 10 prime numbers from that integer in loboc.
+
+And literally in one go, it gave almost entirely correct code:
+{% include figure image_path="/images/chatgpt_loboc_program_with_modulo.webp" alt="" caption="" %}
+
+The only issue was that the modulo operator (%) is not supported in loboc. So I had to ask ChatGPT to exclude the modulo operator and a few other unsupported operators from the code. Ideally, given the grammar, it should have figured it out itself, but it couldn't do that at the time of the writing at least.
+
+{% include figure image_path="/images/chatgpt_loboc_final_code.webp" alt="" caption="" %}
+
+Below is the same code in copyable format:
+```
+signed start;
+signed[10] primes;
+signed i;
+signed j;
+signed isPrime;
+signed rem;
+
+loboc >> start;
+
+i = 0;
+while ( i < 10 ) {
+  isPrime = 1;
+  j = 2;
+  while ( j < start ) {
+    rem = start - ( ( start / j ) * j );
+    if ( rem == 0 ) {
+      isPrime = 0;
+      j = start;
+    }
+    j++;
+  }
+  if ( isPrime == 1 ) {
+    primes[i] = start;
+    i++;
+  }
+  start++;
+}
+
+i = 0;
+while ( i < 10 ) {
+  loboc << primes[i];
+  i++;
+}
+```
+
+I was already quite pleased that my compiler still runs, but boy was I thrilled when I found out that the GPT generated loboc code ran flawlessly! 
+
+{% include figure image_path="/images/chatgpt_loboc_runs_perfectly.webp" alt="" caption="" %}
+
+Here is the assembly code that the compiler generated for the above loboc code. It is pretty simple and only uses three registers at max. This makes me wonder if I can teach ChatGPT to spit assembly code given loboc code! There is only one way to find out! Like and subscribe!
+
+
+PS: It is pretty obvious that I will use ChatGPT to proofread this article if I am using it to write programs in loboc lol.
+
+Additionally, here is a bonus Haiku generated by our lord ChatGPT for your enjoyment because why the heck not:
+
+> Grammar learned, loboc code written  
+  ChatGPT's magic, quickly smitten  
+  Next prime numbers, user's request  
+  ChatGPT compiles, code is the best.
+
+
+
+
+
