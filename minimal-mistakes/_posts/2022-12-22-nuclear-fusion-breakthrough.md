@@ -5,7 +5,7 @@ tags: [science]
 ---
 
 <figure style="text-align: center; display: block; width: 100%;">
-  <img src="/images/dalle_nuclear_fusion_cream.png" alt="DALL·E created image" style="width: 50%; height: auto; margin: 0 auto; display: block;">
+  <img src="/images/dalle_nuclear_fusion_cream.png.webp" alt="DALL·E created image" style="width: 50%; height: auto; margin: 0 auto; display: block;">
   <figcaption style="text-align: center; display: block;">Created with DALL·E</figcaption>
 </figure>
 
