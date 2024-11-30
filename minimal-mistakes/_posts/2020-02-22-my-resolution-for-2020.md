@@ -1,7 +1,7 @@
 ---
 title: "My Resolution for 2020"
 description: "A good idea for a new year's resolution!"
-tags: [2020, resolution]
+tags: ["2020", resolution]
 ---
 
 Recently, I came up with what I believe is a good idea for a new year's resolution. I think it would be great to have a crude understanding of all the countries in the world. Things that are important to know that define a country and things that you specifically are interested in. For example, here are some of the questions that I would like to know the answers for each country, 

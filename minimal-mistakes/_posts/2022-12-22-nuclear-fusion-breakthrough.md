@@ -4,7 +4,10 @@ description: ""
 tags: [science]
 ---
 
-{% include figure image_path="/images/dalle_nuclear_fusion_cream.png" alt="" caption="Created with DALL·E" %}
+<figure style="text-align: center; display: block; width: 100%;">
+  <img src="/images/dalle_nuclear_fusion_cream.png" alt="DALL·E created image" style="width: 50%; height: auto; margin: 0 auto; display: block;">
+  <figcaption style="text-align: center; display: block;">Created with DALL·E</figcaption>
+</figure>
 
 TIL about the recent breakthrough in nuclear fusion. In case you missed it, here is a quote from [the announcement](https://www.energy.gov/articles/doe-national-laboratory-makes-history-achieving-fusion-ignition) on energy.gov website:
 

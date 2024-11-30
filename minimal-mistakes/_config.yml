@@ -11,7 +11,7 @@ minimal_mistakes_skin    : "sunrise" # "default", "air", "aqua", "contrast", "da
 # Site Settings
 locale                   : "en"
 title                    : "The Odd Blog"
-logo			 : "assets/site-logo.png"
+  #logo			 : "assets/site-logo.png"
 title_separator          : "-"
 name                     : "Arpit Garg"
 description              : "As the name suggests, there seems to be something odd about this blog! Let's find it out. :D"
@@ -225,8 +225,8 @@ compress_html:
     envs: development
 
 # Build settings
-source: /home/ubuntu/the-odd-blog/minimal-mistakes
-destination: /srv/www/theoddblog/minimal-mistakes
+source: /home/arpit/projects/the-odd-blog/minimal-mistakes
+destination: /var/www/theoddblog/minimal-mistakes/
 
 defaults:
   - scope:
